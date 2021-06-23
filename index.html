@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+My Family
+</title>
+<link rel="stylesheet" href="style.css">
+<script>
+
+var members=["Anshul Thanneru, Me", "Anvith Thanneru, my brother", "Shilpa Thanneru, my mom", "Shireesh Thanneru, my dad", "Saraswati Thanneru, my grandma", "Srinivas Thanneru, my grandpa"];
+
+var imageURLs=["me.png", "brother.png", "mom.png", "dad.png", "grandma.png", "grandpa.png"];
+
+var n=0;
+function next() {
+document.getElementById("image").src=imageURLs[n];
+document.getElementById("r1").innerHTML=members[n];
+n=n+1;
+if(n>=6) {
+n=0;
+}
+}
+function pause() {
+document.getElementById("music").pause()
+}
+function play() {
+document.getElementById("music").play()
+}
+
+</script>
+</head>
+<body>
+<center>
+<br> <h1> My Family </h1>
+<img id= "image" src= "me.png">
+<p id= "r1"> Anshul Thanneru, Me </p>
+<audio id="music" src="https://mahdihat791.github.io/v2/test.mp3"> </audio>
+<button type="button" onclick="next()"> Next </button>
+<button type="button" onclick="pause()"> Pause Music </button>
+<button type="button" onclick="play()"> Play Music </button>
+</center>
+</body>
+</html>
